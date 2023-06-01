@@ -93,4 +93,26 @@ while (opcion !== 0) {
         console.log(numeroMenor());
         contadorOpcion1++; //contador 1
 
+} else if (opcion === 2) {
+    let radio = parseFloat(prompt("Ingrese el radio del circulo:"))
+
+
+
+
+    function area(radio) {
+
+        let pi = 3.1416
+
+        return pi * radio ** 2;
+
+    }
+
+
+    console.log(`El área de una circunferencia cuyo radio es ${radio} es: ${area(radio)}`);
+    contadorOpcion2++; //contador 2
+
+    // 3. Realizar un algoritmo que permita ingresar los tres lados de un triángulo y mostrar que tipo de triangulo es
+    // a. Escaleno: todos sus lados son diferentes
+    // b. Isósceles: dos de sus lados son iguales y otro diferente
+    // c. Equilátero: todos sus lados son iguales
 } 
