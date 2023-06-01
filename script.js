@@ -115,4 +115,23 @@ while (opcion !== 0) {
     // a. Escaleno: todos sus lados son diferentes
     // b. Isósceles: dos de sus lados son iguales y otro diferente
     // c. Equilátero: todos sus lados son iguales
-} 
+}else if (opcion === 3) {
+    let ladoUno = Number(prompt('Ingresa el valor del primer lado'))
+    let ladoDos = Number(prompt('Ingresa el valor del segundo lado'))
+    let ladoTres = Number(prompt('Ingresa el valor del tercer lado'))
+
+
+    if (ladoUno != ladoDos && ladoUno != ladoTres && ladoDos != ladoTres) {
+        console.log(`El triangulo es un escaleno `);
+
+    } else if (ladoUno === ladoDos || ladoUno === ladoTres || ladoDos === ladoTres) {
+        console.log(`El triangulo es un isósceles`);
+
+    } else if (ladoUno === ladoDos && ladoUno === ladoTres && ladoDos === ladoTres) {
+        console.log(`El triangulo es un equilátero`);
+    } else {
+        console.log('no ingreso los valores correctos');
+    }
+    contadorOpcion3++; //contador 3
+
+}
