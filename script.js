@@ -134,4 +134,48 @@ while (opcion !== 0) {
     }
     contadorOpcion3++; //contador 3
 
+}else if (opcion === 4) {
+    let x = parseInt(prompt('Digite el valor de x: '));
+    let divisores_n1 = [1]
+    for (let i = 2; i < x; i++) {
+        if (x % i == 0) {
+            divisores_n1.push(i)
+        }
+        else if (divisores_n1.length < 2) {
+            divisores_n1.push(x)
+        }
+
+    }
+    let suma_d1 = divisores_n1.reduce((a, b) => a + b)
+    console.log(`Los divisores de ${x} son: ${divisores_n1} y su suma es: ${suma_d1} `)
+
+
+
+
+    // //Valor de y
+    let y = parseInt(prompt('Digite el valor de y: '));
+    let divisores_n2 = [1]
+    for (let i = 2; i < y; i++) {
+        if (y % i == 0) {
+            divisores_n2.push(i)
+        } else if (divisores_n2.length < 2) {
+            divisores_n2.push(x)
+        }
+
+    }
+    let suma_d2 = divisores_n2.reduce((a, b) => a + b)
+    console.log(`Los divisores de ${y} son: ${divisores_n2} y su suma es: ${suma_d2} `)
+
+
+    // //comprobación si son o no números amigos
+    if (suma_d1 == y && suma_d2 == x) {
+        console.log(`${x} y ${y} son números amigos`)
+    } else {
+        console.log(`${x} y ${y} no son números amigos`)
+    }
+    contadorOpcion4++; //contador 4
+
+
+
+
 }
