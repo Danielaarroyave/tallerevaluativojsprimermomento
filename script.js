@@ -178,4 +178,35 @@ while (opcion !== 0) {
 
 
 
+}else if (opcion === 5) {
+    let valorCompra = parseFloat(prompt("Ingrese el valor de la compra"))
+    let Producto = (prompt("Ingrese el nombre del producto"))
+    let Cantidad = parseFloat(prompt("Ingrese la cantidad a comprar"))
+    let valorNeto = (Cantidad * valorCompra)
+    let iva = (valorNeto * 0.19)
+    let valorBruto = (valorNeto + iva)
+
+    // // a. Es necesario mostrar el valor y el IVA (19%)
+    console.log(`El valor de la compra es ${valorBruto} y su iva es de ${iva}`);
+
+    // // b. Si la compra es superior a 500000 se le devuelve el valor del IVA
+
+    if (valorBruto > 500000) {
+        console.log(`por tu compra superior a 500000 se te realiza una devolucion de ${iva} correspondiente al iva`);
+    }
+    else {
+        console.log('no hay devolución');
+    }
+
+    // c. Si la compra es superior a 1000000 se le hace un descuento del 10% sobre la compra
+
+    if (valorBruto > 1000000) {
+        console.log(`Por tu compra superior a 1000000 se te hace una devolucion de ${(valorBruto * 10) / 100}`);
+    }
+    else {
+        console.log('No hay devolucion por tu compra');
+    }
+    contadorOpcion5++; //contador 5
+
+
 }
